@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "D:\Python\MediBot\MediBot\app.py", line 11, in <module>
+    from store_index import text_chunks
+  File "D:\Python\MediBot\MediBot\store_index.py", line 13, in <module>
+    extracted_data = load_pdf_file(data='Data/')
+  File "D:\Python\MediBot\MediBot\src\helper.py", line 12, in load_pdf_file
+    documents=loader.load()
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\langchain_community\document_loaders\directory.py", line 117, in load
+    return list(self.lazy_load())
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\langchain_community\document_loaders\directory.py", line 195, in lazy_load
+    yield from self._lazy_load_file(i, p, pbar)
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\langchain_community\document_loaders\directory.py", line 223, in _lazy_load_file
+    for subdoc in loader.lazy_load():
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\langchain_community\document_loaders\pdf.py", line 307, in lazy_load
+    yield from self.parser.lazy_parse(blob)
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\langchain_community\document_loaders\parsers\pdf.py", line 410, in lazy_parse
+    "page_label": pdf_reader.page_labels[page_number],
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\pypdf\_doc_common.py", line 1078, in page_labels
+    return [page_index2page_label(self, i) for i in range(len(self.pages))]
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\pypdf\_doc_common.py", line 1078, in <listcomp>
+    return [page_index2page_label(self, i) for i in range(len(self.pages))]
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\pypdf\_page_labels.py", line 179, in index2label
+    return get_label_from_nums(number_tree, index)
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\pypdf\_page_labels.py", line 140, in get_label_from_nums
+    value = nums[i + 1].get_object()
+  File "C:\Users\yeami\anaconda3\envs\medibot\lib\site-packages\pypdf\generic\_base.py", line 368, in get_object
+    return self.pdf.get_object(self)
+KeyboardInterrupt
+^C
